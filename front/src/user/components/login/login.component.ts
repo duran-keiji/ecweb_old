@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
-
-export class LoginSet {
-  constructor(public username: string, public password: string) {}
-}
-
+import {FormControl, FormBuilder, Validators} from '@angular/forms';
+import {ActivatedRoute, Params} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,16 +8,24 @@ export class LoginSet {
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  logionSet = new LoginSet('', '');
+  userInfo = this.formBuilder.group({
+    userName: new FormControl('', [Validators.required]),
+    password: new FormControl('', [Validators.required]),
+  })
   hide = true;
-  constructor() {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private activRoute: ActivatedRoute,
+  ) {}
 
   ngOnInit() {
-
+    const selfUserName = this.activRoute.snapshot.queryParamMap.get('user_name');
+    if(selfUserName) {
+      this.userInfo.controls.userName.setValue(selfUserName);
+    }
   }
 
   onSubmit() {
-    console.log(this.logionSet)
   }
 
 }
