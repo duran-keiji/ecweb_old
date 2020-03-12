@@ -18,10 +18,11 @@
             </mat-form-field>
         </div>
         <div class="action-area">
-            <mat-button type="submit" color="primary" [disabled]="!userInfo.valid" (click)="onSingnin($event)">Login</mat-button>
+            <button  type="submit" mat-raised-button color="primary" [disabled]="!userInfo.valid" (click)="onSingnin($event)">Login</button>
         </div>
         <div class="menu-area">
             <a mat-button color="primary"[routerLink]="['/password-reset']">パスワードをお忘れの方</a>
         </div>
     </mat-card-content>
 </mat-card>
+
