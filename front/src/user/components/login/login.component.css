@@ -1,5 +1,7 @@
 .login-card {
-    width: auto;
+
+  width: 400px;
+  text-align: center;
 }
 
 .login-title {
@@ -31,4 +33,12 @@
     text-align: right;
     align-items: flex-end;
     padding-bottom: 5px;
+}
+
+#login-button {
+    width: 100%;
+}
+
+.full-width {
+    width: 100%;
 }

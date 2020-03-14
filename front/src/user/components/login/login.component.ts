@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormBuilder, Validators} from '@angular/forms';
+import {FormControl, FormGroupDirective, FormBuilder, NgForm, Validators} from '@angular/forms';
 import {ActivatedRoute, Params} from '@angular/router';
 
 @Component({
@@ -7,6 +7,7 @@ import {ActivatedRoute, Params} from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
   userInfo = this.formBuilder.group({
     userName: new FormControl('', [Validators.required]),

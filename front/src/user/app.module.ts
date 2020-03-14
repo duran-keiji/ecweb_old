@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 
 import { LoginComponent } from './components/login/login.component';
 
 import { AsBaseModule } from '../common/as-base.module';
+import { AsMaterialModule } from '../common/as-material-module';
 
 
 
@@ -15,6 +15,7 @@ import { AsBaseModule } from '../common/as-base.module';
   ],
   imports: [
     AsBaseModule,
+    AsMaterialModule,
     AppRoutingModule,
   ],
   providers: [],
