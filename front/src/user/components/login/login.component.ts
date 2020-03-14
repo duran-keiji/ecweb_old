@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroupDirective, FormBuilder, NgForm, Validators} from '@angular/forms';
 import {ActivatedRoute, Params} from '@angular/router';
+import {AsMaterialModule} from "common/as-material-module"
 
 @Component({
   selector: 'app-login',
