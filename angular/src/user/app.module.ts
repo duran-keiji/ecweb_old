@@ -7,11 +7,13 @@ import { FormsModule } from '@angular/forms';
 import { AsMaterialModule } from '../common/as-material.module';
 
 import { LoginComponent } from './components/login/login.component';
+import { UserTopComponent } from './components/user-top/user-top.component';
 
 
 @NgModule({
   declarations: [
-    LoginComponent
+    LoginComponent,
+    UserTopComponent
   ],
   imports: [
     BrowserModule,

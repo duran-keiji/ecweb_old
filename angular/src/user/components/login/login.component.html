@@ -24,7 +24,7 @@
                     </mat-error>
                     <mat-error
                       *ngIf="password.errors && password.errors.minlength">
-                      Password must be of length 6
+                      Passwordは６文字以上で入力してください。
                     </mat-error>
                   <mat-icon matSuffix>lock</mat-icon>
                 </mat-form-field>
@@ -91,7 +91,7 @@
                   </mat-error>
                   <mat-error
                     *ngIf="password.errors && password.errors.minlength">
-                    Password must be of length 6
+                    Passwordは６文字以上で入力してください。
                   </mat-error>
                 <mat-icon matSuffix>lock</mat-icon>
 
@@ -108,7 +108,7 @@
                   #repassword="ngModel">
                   <mat-error
                     *ngIf="repassword.errors && repassword.errors.required">
-                    Passwordの再入力をしてください。
+                    Passwordを再入力してください。
                   </mat-error>
                 <mat-icon matSuffix>lock</mat-icon>
               </mat-form-field>
