@@ -12,7 +12,7 @@
                     name="username"
                     ngModel
                     #username="ngModel">
-                    <mat-error *ngIf="username.invalid">ユーザーネームは必須項目です。</mat-error>
+                    <mat-error *ngIf="username.invalid">ユーザーネームは必須入力です。</mat-error>
                   <mat-icon matSuffix>perm_identity</mat-icon>
                 </mat-form-field>
                 <mat-form-field>
@@ -59,7 +59,7 @@
                 <mat-icon matSuffix>perm_identity</mat-icon>
                 <mat-error
                   *ngIf="username.invalid">
-                  ユーザーネームは必須項目です。
+                  ユーザーネームは必須入力です。
                 </mat-error>
 
               </mat-form-field>
@@ -71,7 +71,7 @@
                   name="email"
                   ngModel
                   #email="ngModel">
-                  <mat-error *ngIf="email.invalid">メールアドレスは必須項目です。</mat-error>
+                  <mat-error *ngIf="email.invalid">メールアドレスは必須入力です。</mat-error>
                 <mat-icon matSuffix>email</mat-icon>
               </mat-form-field>
               <mat-form-field>
@@ -98,7 +98,7 @@
               <mat-form-field>
                   <input
                   matInput
-                  placeholder="パスワード（確認）"
+                  placeholder="パスワード(確認)"
                   type="password"
                   required
                   minlength="6"
@@ -117,7 +117,7 @@
                 class="login-button"
                 type="submit"
                 onclick="hoge();">
-                新規登録
+                登録
               </button>
             </form>
           </mat-card-content>
