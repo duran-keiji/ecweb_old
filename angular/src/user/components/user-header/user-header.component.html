@@ -1,4 +1,63 @@
 <div class ="user-header">
+  <button mat-button [matMenuTriggerFor]="tab"><fa-icon [icon]="faAlignJustify"></fa-icon></button>
+
+<mat-menu #tab="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="category">カテゴリー</button>
+  <button mat-menu-item [matMenuTriggerFor]="history">購入履歴</button>
+  <button mat-menu-item >ランキング</button>
+
+</mat-menu>
+
+<mat-menu #category="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="fashion">ファッション・靴・スポーツウェア</button>
+  <button mat-menu-item [matMenuTriggerFor]="book">本・コミック・電子書籍</button>
+  <button mat-menu-item [matMenuTriggerFor]="dailyGoods">生活用品・雑貨・飲料</button>
+  <button mat-menu-item [matMenuTriggerFor]="homeAppliances">家電・カメラ・AV機器</button>
+</mat-menu>
+
+<mat-menu #history="matMenu">
+  <button mat-menu-item>2019-03-11</button>
+  <button mat-menu-item>2019-01-21</button>
+  <button mat-menu-item>2018-05-23</button>
+  <button mat-menu-item>2015-08-05</button>
+</mat-menu>
+
+<mat-menu #fashion="matMenu">
+  <button mat-menu-item>レディース</button>
+  <button mat-menu-item>メンズ</button>
+  <button mat-menu-item>キッズ・ベビー</button>
+  <button mat-menu-item>スポーツウェア・シューズ</button>
+  <button mat-menu-item>アウトドア</button>
+
+</mat-menu>
+
+<mat-menu #book="matMenu">
+  <button mat-menu-item>本</button>
+  <button mat-menu-item>雑誌</button>
+  <button mat-menu-item>コミック</button>
+  <button mat-menu-item>単行本</button>
+  <button mat-menu-item>小説</button>
+  <button mat-menu-item>文庫本</button>
+  <button mat-menu-item>新書</button>
+</mat-menu>
+
+<mat-menu #dailyGoods="matMenu">
+  <button mat-menu-item>お水</button>
+  <button mat-menu-item>飲料水</button>
+  <button mat-menu-item>軽食品</button>
+  <button mat-menu-item>掃除用品</button>
+  <button mat-menu-item>キッチン用品・食器・調理器具</button>
+</mat-menu>
+
+<mat-menu #homeAppliances="matMenu">
+  <button mat-menu-item>生活家電</button>
+  <button mat-menu-item>大型家電</button>
+  <button mat-menu-item>美容家電</button>
+  <button mat-menu-item>照明</button>
+  <button mat-menu-item>カメラ・ビデオ</button>
+  <button mat-menu-item>オーディオ</button>
+  <button mat-menu-item>イヤホン・ヘッドフォン</button>
+</mat-menu>
 
 
-</div>>
+</div>
