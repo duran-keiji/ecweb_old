@@ -2,11 +2,19 @@
   background-color: #424242;
 }
 
-fa-icon {
-  size: 10px;
+#icon {
   color: #009688;
 }
 
 mat-menu {
   background-color: #009688;
 }
+
+#siteName {
+  color: darkgray;
+}
+
+#rightIcon{
+  float: right;
+}
+

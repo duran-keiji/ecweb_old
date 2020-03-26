@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { faAlignJustify } from '@fortawesome/free-solid-svg-icons';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faBell } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+
+
 @Component({
   selector: 'app-user-header',
   templateUrl: './user-header.component.html',
@@ -7,6 +13,10 @@ import { faAlignJustify } from '@fortawesome/free-solid-svg-icons';
 })
 export class UserHeaderComponent implements OnInit {
   faAlignJustify = faAlignJustify;
+  faSerch = faSearch;
+  faBell = faBell;
+  faShoppingCart = faShoppingCart;
+  faUser = faUser;
   constructor() { }
 
   ngOnInit(): void {
