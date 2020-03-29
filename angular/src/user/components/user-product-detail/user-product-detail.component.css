@@ -1,0 +1,21 @@
+
+
+mat-card-content {
+
+  text-align: center;
+}
+.productDetail {
+  width: 100%;
+}
+
+#image {
+  width: 33.33%;
+}
+
+#item {
+  width: 33.33%;
+}
+
+#action {
+  width: 33.33%;
+}
