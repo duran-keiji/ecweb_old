@@ -1,21 +1,42 @@
 
-
-mat-card-content {
-
-  text-align: center;
+.userProductDetail {
 }
-.productDetail {
+
+mat-card {
+  float: left;
+  text-align: center;
+
+}
+#productDetail {
   width: 100%;
 }
 
 #image {
-  width: 33.33%;
+  width: 31.6%;
 }
 
 #item {
-  width: 33.33%;
+  width: 31.6%;
 }
 
 #action {
-  width: 33.33%;
+  width: 31.6%;
+}
+
+.productInfo {
+  width: 100%;
+}
+
+#buyNow {
+  background-color: #D32F2F;
+  color: white;
+  margin-top: 17px;
+}
+
+#faHeart {
+  color: #D32F2F;
+}
+
+#favorite {
+  margin-top: 17px;
 }
