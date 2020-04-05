@@ -3,7 +3,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AsBaseModule } from '../common/as-base.module';
 import { AsMaterialModule } from '../common/as-material.module';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from '../app/app.component';
@@ -11,6 +11,7 @@ import { LoginComponent } from './components/login/login.component';
 import { UserTopComponent } from './components/user-top/user-top.component';
 import { UserHeaderComponent } from './components/user-header/user-header.component';
 import { UserProductDetailComponent } from './components/user-product-detail/user-product-detail.component';
+import { from } from 'rxjs';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { UserProductDetailComponent } from './components/user-product-detail/use
     AsBaseModule,
     AppRoutingModule,
     AsMaterialModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
