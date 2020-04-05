@@ -1,6 +1,6 @@
 <div class ="user-header">
-  <span id ="leftIcon">
-    <span id="icon">
+  <div  id ="leftIcon" fxLayout="row" fxLayoutAlign="start start">
+    <div id="icon">
         <button mat-button [matMenuTriggerFor]="tab"><fa-icon [icon]="faAlignJustify"></fa-icon></button>
 
       <mat-menu #tab="matMenu">
@@ -60,30 +60,30 @@
         <button mat-menu-item>オーディオ</button>
         <button mat-menu-item>イヤホン・ヘッドフォン</button>
       </mat-menu>
-    </span>
+    </div>
 
-    <span id="siteName">
+    <div id="siteName">
       <button mat-button (click)="routerTop();">ECサイト</button>
-    </span>
-  </span>
+    </div>
+  </div>
 
-  <span id=rightIcon>
-    <span id="icon">
+  <div id="rightIcon" fxLayout="row" fxLayoutAlign="end start">
+    <div id="icon">
       <button mat-button id="searchIcon"><fa-icon [icon]="faSerch"></fa-icon></button>
-    </span>
+    </div>
 
-    <span id="icon">
+    <div id="icon">
       <button mat-button matBadge="2" matBadgeColor="warn" id="noticeIcon"><fa-icon [icon]="faBell"></fa-icon></button>
-    </span>
+    </div>
 
-    <span id="icon">
+    <div id="icon">
       <button mat-button matBadge="15" matBadgeColor="warn" id="cart"><fa-icon [icon]="faShoppingCart"></fa-icon></button>
 
-    </span>
+    </div>
 
-    <span id="icon">
+    <div id="icon">
       <button mat-button id="user"><fa-icon [icon]="faUser"></fa-icon></button>
 
-    </span>
-  </span>
+    </div>
+  </div>
 </div>

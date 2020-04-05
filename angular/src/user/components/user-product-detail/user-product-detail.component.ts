@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SafeMethodCall } from '@angular/compiler';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 interface quantity {
   value: string;
@@ -20,9 +21,18 @@ export class UserProductDetailComponent implements OnInit {
     {value: '3', viewValue: '3'}
   ];
 
+  productDetail:String = "";
+
   constructor() { }
 
   ngOnInit(): void {
+    // this.setWidth();
+  }
+
+  setWidth(){
+    var element = document.getElementById("image");
+    var style = element.style.width;
+    console.log(style);
   }
 
 }

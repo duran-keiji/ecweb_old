@@ -1,5 +1,6 @@
 
 .userProductDetail {
+  width: auto;
 }
 
 mat-card {
@@ -12,19 +13,19 @@ mat-card {
 }
 
 #image {
-  width: 31.6%;
+ width:  100%;
+}
+
+#productInfo {
+  width: 100%;
 }
 
 #item {
-  width: 31.6%;
+ width:  100%;
 }
 
 #action {
-  width: 31.6%;
-}
-
-.productInfo {
-  width: 100%;
+  width:  100%;
 }
 
 #buyNow {
