@@ -12,6 +12,7 @@ import { UserTopComponent } from './components/user-top/user-top.component';
 import { UserHeaderComponent } from './components/user-header/user-header.component';
 import { UserProductDetailComponent } from './components/user-product-detail/user-product-detail.component';
 import { from } from 'rxjs';
+import { UserCartComponent } from './components/user-cart/user-cart.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { from } from 'rxjs';
     LoginComponent,
     UserTopComponent,
     UserHeaderComponent,
-    UserProductDetailComponent
+    UserProductDetailComponent,
+    UserCartComponent
   ],
   imports: [
     AsBaseModule,

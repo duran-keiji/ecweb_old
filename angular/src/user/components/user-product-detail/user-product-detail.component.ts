@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SafeMethodCall } from '@angular/compiler';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
@@ -20,9 +21,15 @@ export class UserProductDetailComponent implements OnInit {
     {value: '3', viewValue: '3'}
   ];
 
-  constructor() { }
+  constructor(
+    private router:Router
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  addToCart() {
+    this.router.navigate(['/cart']);
   }
 
 }

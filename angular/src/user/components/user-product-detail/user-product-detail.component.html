@@ -29,6 +29,7 @@
             </mat-select>
         </mat-form-field>
         </div>
+<<<<<<< Updated upstream
         <div>
           <button mat-raised-button color="warn">カート追加</button>
         </div>
@@ -42,6 +43,30 @@
       </mat-card>
     </span>
   </mat-card>
+=======
+        <mat-card id="action">
+          <div>
+            <mat-form-field>
+              <mat-label>数量</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let quantity of quantitys" [value]="quantity.value">
+                  {{quantity.viewValue}}
+                </mat-option>
+              </mat-select>
+          </mat-form-field>
+          </div>
+          <div>
+            <button mat-raised-button color="warn" (click)="addToCart();">カート追加</button>
+          </div>
+          <div>
+            <button mat-raised-button id="buyNow" >この商品を購入</button>
+          </div>
+          <div>
+            <button mat-raised-button id="favorite"><fa-icon id="faHeart" [icon]="faHeart"></fa-icon></button>
+          </div>
+        </mat-card>
+      </div>
+>>>>>>> Stashed changes
 
   <mat-card class="productInfo">
     <a>商品説明</a>

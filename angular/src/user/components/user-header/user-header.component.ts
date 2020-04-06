@@ -30,4 +30,8 @@ export class UserHeaderComponent implements OnInit {
     this.router.navigate(['/top']);
   }
 
+  addToCart(){
+    this.router.navigate(['/cart']);
+  }
+
 }
