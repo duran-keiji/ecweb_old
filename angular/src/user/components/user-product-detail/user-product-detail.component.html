@@ -1,23 +1,24 @@
 <app-user-header></app-user-header>
-
-<div class="userProductDetail">
-  <mat-card id="productDetail">
-    <div>
-      <mat-card id="image">
-        <img matCardImage src="Card wide image source">
-      </mat-card>
-    </div>
-
-    <div>
-      <mat-card id="item">
-        <div>商品名</div>
-        <div>価格</div>
-        <div>在庫</div>
-        <div>お届け日数</div>
-      </mat-card>
-    </div>
-
-    <div>
+<div class="userProductDetail" style="background-color: #fff;">
+  <mat-card id="productDetail" style="padding: 0px 10px;">
+    <div fxLayout="row">
+      <div fxFlex="40%">
+        <mat-card id="image">
+          <img matCardImage src="Card wide image source">
+        </mat-card>
+      </div>
+      <div fxFlex="40%">
+        <mat-card id="productInfo">
+          <div>商品名</div>
+          <div>商品説明</div>
+        </mat-card>
+      </div>
+      <div fxFlex="20%">
+        <mat-card id="item">
+          <div>価格</div>
+          <div>在庫</div>
+          <div>お届け日数</div>
+        </mat-card>
         <mat-card id="action">
           <div>
             <mat-form-field>
@@ -27,24 +28,21 @@
                   {{quantity.viewValue}}
                 </mat-option>
               </mat-select>
-           </mat-form-field>
+            </mat-form-field>
           </div>
           <div>
             <button mat-raised-button color="warn" (click)="addToCart();">カート追加</button>
           </div>
           <div>
-            <button mat-raised-button id="buyNow" >この商品を購入</button>
+            <button mat-raised-button id="buyNow">この商品を購入</button>
           </div>
           <div>
-            <button mat-raised-button id="favorite"><fa-icon id="faHeart" [icon]="faHeart"></fa-icon></button>
+            <button mat-raised-button id="favorite">
+              <fa-icon id="faHeart" [icon]="faHeart"></fa-icon>
+            </button>
           </div>
         </mat-card>
+      </div>
     </div>
   </mat-card>
-
-
-  <mat-card class="productInfo">
-    <a>商品説明</a>
-  </mat-card>
-
 </div>
