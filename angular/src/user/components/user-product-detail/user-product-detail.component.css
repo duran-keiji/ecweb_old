@@ -12,18 +12,18 @@ mat-card {
 }
 
 #image {
-  width: 31.6%;
+  width: 100%;
 }
 
 #item {
-  width: 31.6%;
+  width: 100%;
 }
 
 #action {
-  width: 31.6%;
+  width: 100%;
 }
 
-.productInfo {
+#productInfo {
   width: 100%;
 }
 
