@@ -1,52 +1,66 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatPaginator} from '@angular/material/paginator';
-import {MatTableDataSource} from '@angular/material/table';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-user-cart',
   templateUrl: './user-cart.component.html',
   styleUrls: ['./user-cart.component.css']
 })
 export class UserCartComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['image', 'productName', 'unitPrice', 'quantity', 'subtotal', 'postage', 'totalPrice', 'delete'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
-  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.dataSource.paginator = this.paginator;
   }
 
+  goToTop() {
+    this.router.navigate(['/top']);
+  }
+
+  goToComfirm() {
+    this.router.navigate(['/productDetail']);
+  }
 }
 
 export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
+  productName: string;
+  image: number;
+  unitPrice: number;
+  quantity: string;
+  subtotal: number;
+  postage: number;
+  totalPrice: number;
+  delete: number;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
-  {position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na'},
-  {position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg'},
-  {position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al'},
-  {position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si'},
-  {position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P'},
-  {position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S'},
-  {position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl'},
-  {position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar'},
-  {position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K'},
-  {position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca'},
+  { image: 1, productName: 'Hydrogen', unitPrice: 1.0079, quantity: 'H', subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },
+  { image: 2, productName: 'Helium', unitPrice: 4.0026, quantity: 'He', subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },
+  { image: 3, productName: 'Lithium', unitPrice: 6.941, quantity: 'Li', subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },
+  { image: 4, productName: 'Beryllium', unitPrice: 9.0122, quantity: 'Be', subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },
+  { image: 5, productName: 'Boron', unitPrice: 10.811, quantity: 'B', subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },
+  { image: 6, productName: 'Carbon', unitPrice: 12.0107, quantity: 'C', subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },
+  { image: 7, productName: 'Nitrogen', unitPrice: 14.0067, quantity: 'N', subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },
+  { image: 8, productName: 'Oxygen', unitPrice: 15.9994, quantity: 'O', subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },
+  { image: 9, productName: 'Fluorine', unitPrice: 18.9984, quantity: 'F', subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },
+  { image: 10, productName: 'Neon', unitPrice: 20.1797, quantity: 'Ne', subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },
+  { image: 11, productName: 'Sodium', unitPrice: 22.9897, quantity: 'Na', subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },
+  { image: 12, productName: 'Magnesium', unitPrice: 24.305, quantity: 'Mg', subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },
+  { image: 13, productName: 'Aluminum', unitPrice: 26.9815, quantity: 'Al', subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },
+  { image: 14, productName: 'Silicon', unitPrice: 28.0855, quantity: 'Si', subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },
+  { image: 15, productName: 'Phosphorus', unitPrice: 30.9738, quantity: 'P', subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },
+  { image: 16, productName: 'Sulfur', unitPrice: 32.065, quantity: 'S', subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },
+  { image: 17, productName: 'Chlorine', unitPrice: 35.453, quantity: 'Cl', subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },
+  { image: 18, productName: 'Argon', unitPrice: 39.948, quantity: 'Ar', subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },
+  { image: 19, productName: 'Potassium', unitPrice: 39.0983, quantity: 'K', subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },
+  { image: 20, productName: 'Calcium', unitPrice: 40.078, quantity: 'Ca', subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },
 ];
