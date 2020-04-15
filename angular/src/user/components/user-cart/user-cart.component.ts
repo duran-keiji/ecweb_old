@@ -11,11 +11,13 @@ export class UserCartComponent implements OnInit {
   displayedColumns: string[] = ['image', 'productName', 'unitPrice', 'quantity', 'subtotal', 'postage', 'totalPrice', 'delete'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   selected = "option1";
+
   constructor(
     private router: Router
   ) { }
 
   ngOnInit(): void {
+    console.log(this.dataSource.filteredData);
   }
 
   goToTop() {
@@ -40,9 +42,9 @@ export interface PeriodicElement {
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  { image: 1, productName: 'Hydrogen', unitPrice: 1000, quantity: 1, subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },
-  { image: 2, productName: 'Helium', unitPrice: 1000, quantity: 1, subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },
-  { image: 3, productName: 'Lithium', unitPrice: 1000, quantity: 1, subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },
+  { image: 1, productName: 'Hydrogen', unitPrice: 1000, quantity: 4, subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },
+  { image: 2, productName: 'Helium', unitPrice: 1000, quantity: 2, subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },
+  { image: 3, productName: 'Lithium', unitPrice: 1000, quantity: 3, subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },
   { image: 4, productName: 'Beryllium', unitPrice: 1000, quantity: 1, subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },
   { image: 5, productName: 'Boron', unitPrice: 1000, quantity: 1, subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },
   { image: 6, productName: 'Carbon', unitPrice: 1000, quantity: 1, subtotal: 500, postage: 250, totalPrice: 750, delete: 0 },

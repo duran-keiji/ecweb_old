@@ -4,7 +4,9 @@
     <!-- image Column -->
     <ng-container matColumnDef="image">
       <th mat-header-cell *matHeaderCellDef>画像</th>
-      <td mat-cell *matCellDef="let element">{{ element.image }}</td>
+      <td mat-cell *matCellDef="let element" id="imageSize">
+        <img matCardImage src="Card wide image source">
+      </td>
     </ng-container>
 
     <!-- productName Column -->
@@ -48,13 +50,15 @@
     <!-- totalPrice Column -->
     <ng-container matColumnDef="totalPrice">
       <th mat-header-cell *matHeaderCellDef>合計</th>
-      <td mat-cell *matCellDef="let element">{{ element.totalPrice }}</td>
+      <td mat-cell *matCellDef="let element" id="totalPrice">￥{{ element.totalPrice }}</td>
     </ng-container>
 
     <!-- delete Column -->
     <ng-container matColumnDef="delete">
       <th mat-header-cell *matHeaderCellDef>削除</th>
-      <td mat-cell *matCellDef="let element">{{ element.delete }}</td>
+        <td mat-cell *matCellDef="let element">
+          <button mat-raised-button id="deleteButton">削除</button>
+        </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -64,12 +68,12 @@
   <div class="subtotal" fxLayout="column">
     <mat-card id="box">
       <p>
-        <span style="font-weight:bold; font-size: 20px; margin-right: 15px;">小計</span>
-        <span style="color:#D32F2F;">￥〇〇</span>
+        <span id="cardContents1" >小計</span>
+        <span id="cardContents2">￥〇〇</span>
       </p>
       <p>
-        <span style="font-weight:bold; font-size: 20px; margin-right: 15px;">送料</span>
-        <span style="color:#D32F2F;">￥△△</span>
+        <span id="cardContents1">送料</span>
+        <span id="cardContents2">￥△△</span>
       </p>
       <div style="margin-bottom: 5%; text-align: center;">
         <button

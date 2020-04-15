@@ -21,7 +21,7 @@
         </mat-card>
         <mat-card id="action">
           <div>
-            <mat-form-field>
+            <mat-form-field id="quantity">
               <mat-label>数量</mat-label>
               <mat-select>
                 <mat-option *ngFor="let quantity of quantitys" [value]="quantity.value">
@@ -31,7 +31,7 @@
             </mat-form-field>
           </div>
           <div>
-            <button mat-raised-button color="warn" (click)="addToCart();">カート追加</button>
+            <button mat-raised-button id="addCart" color="warn" (click)="addToCart();">カート追加</button>
           </div>
           <div>
             <button mat-raised-button id="buyNow">この商品を購入</button>

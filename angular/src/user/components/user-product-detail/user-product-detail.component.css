@@ -27,7 +27,16 @@ mat-card {
   width: 100%;
 }
 
+#quantity {
+  width: 150px;
+}
+
+#addCart {
+  width: 150px;
+}
+
 #buyNow {
+  width: 150px;
   background-color: #D32F2F;
   color: white;
   margin-top: 17px;
