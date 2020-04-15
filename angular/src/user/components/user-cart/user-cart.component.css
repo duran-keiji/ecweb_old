@@ -28,6 +28,15 @@ p {
   margin-bottom: 10%;
 }
 
+#quantityArea {
+  width: 50px;
+}
+
+mat-select {
+  width: 50px;
+}
+
+
 
 
 
