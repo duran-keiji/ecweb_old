@@ -1,0 +1,27 @@
+■環境構築手順
+
+//githubから「ecweb」リポジトリをクローン
+https://github.com/duran-keiji/ecweb.git
+
+//Homebrewのインストール, nodebrewのインストール, Node.jsのインストール
+↓（下記URLを参照）
+https://qiita.com/kyosuke5_20/items/c5f68fc9d89b84c0df09
+
+//Angular CLIをインストール
+npm install -g @angular/cli
+
+//material, cdk, animationのインストール
+npm install --save angular/material2-builds angular/cdk-builds angular/animations-builds
+
+//Font Awesomeのインストール
+ng add @fortawesome/angular-fontawesome
+npm install @fortawesome/fontawesome-svg-core
+npm install @fortawesome/free-solid-svg-icons
+npm install @fortawesome/angular-fontawesome
+
+//ecweb>angularのディレクトリで実行
+npm start
+
+//サイト検索
+localhost:4200
+
